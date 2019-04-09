@@ -1,0 +1,162 @@
+<html>
+  
+  <head>
+    <title>4D Editor - Rafał Michałuszek</title>
+    <meta charset="utf-8">
+    <link  rel="stylesheet" href="css/style.css"/>
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.6.0/math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/interactjs@1.3.4/dist/interact.js"></script>
+  </head>
+  
+  <body>
+    
+    <div id="topbar">
+      <div id="logo">
+        4D Editor by Rafał Michałuszek
+      </div>
+    </div>
+    
+    <!-- 2d displays of crosssections -->
+    
+    <div id="left-displays">
+      
+        <div class="display-section" id="xy">
+          <div class="display-topbar">
+            <div class="display-title">
+              XY
+            </div>
+          </div>
+          <div class="display">
+            <div class="field">
+              <svg>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="display-section" id="xz">
+          <div class="display-topbar">
+            <div class="display-title">
+              XZ
+            </div>
+          </div>
+          <div class="display">
+            <div class="field">
+              <svg>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="display-section" id="zy">
+          <div class="display-topbar">
+            <div class="display-title">
+              ZY
+            </div>
+          </div>
+          <div class="display">
+            <div class="field">
+              <svg>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="display-section" id="xw">
+          <div class="display-topbar">
+            <div class="display-title">
+              XW
+            </div>
+          </div>
+          <div class="display">
+            <div class="field">
+              <svg>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="display-section" id="yW">
+          <div class="display-topbar">
+            <div class="display-title">
+              YW
+            </div>
+          </div>
+          <div class="display">
+            <div class="field">
+              <svg>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="display-section" id="zw">
+          <div class="display-topbar">
+            <div class="display-title">
+              ZW
+            </div>
+          </div>
+          <div class="display">
+            <div class="field">
+              <svg>
+              </svg>
+            </div>
+          </div>
+        </div>
+      
+        <div class="display-section" id="coordinates">
+          <div class="display-topbar">
+            <div class="display-title">
+              Point coordinates
+            </div>
+          </div>
+          <div class="panel-section">
+            <div id="point-name">Point 0</div>
+            <label>X:</label><input step="0.25" min="-10" max="10" type="number" value="0">
+            <label>Y:</label><input step="0.25" min="-10" max="10" type="number" value="0">
+            <label>Z:</label><input step="0.25" min="-10" max="10" type="number" value="0">
+            <label>W:</label><input step="0.25" min="-10" max="10" type="number" value="0">
+          </div>
+        </div>
+      
+    </div>
+    <div id="points-panel">
+      <div class="display-section" id="points-list">
+          <div class="display-topbar">
+            <div class="display-title">
+              Points
+            </div>
+          </div>
+          <div class="panel-section">
+              <ul id="points-container">
+                
+              </ul>
+          </div>
+        </div>
+    </div>
+    <!-- end of left panels -->
+    
+    <!-- 4d display -->
+    <div id="main-display">
+        <div class="display-topbar">
+           <div class="display-title">
+             3D View
+           </div>
+        </div>
+        <div id="main-display-canvas-container">
+            <canvas id="main-display-canvas"></canvas>
+        </div>
+    </div>
+    
+    <script src="js/4d-to-3d.js"></script>
+    
+    <script src="js/point-coordinates-display.js"></script>
+    <script src="js/points-list-display.js"></script>
+    <script src="js/main-display.js"></script>
+    <script src="js/flat-displays.js"></script>
+    <script src="js/main.js"></script>
+    
+  </body>
+  
+</html>

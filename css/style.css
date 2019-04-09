@@ -1,0 +1,288 @@
+html, body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  
+  background: #121212;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.5); 
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.8);  
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.6); 
+}
+::-webkit-scrollbar-corner {
+  background: inherit;
+}
+
+#topbar {
+  background: black;
+  top: 0;
+  height: 40px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  
+  padding: 0px 10px;
+  background: #34495e;
+}
+#logo {
+  color: white;
+  font-size: 1em;
+  line-height: 40px;
+  font-weight: bold;
+}
+/* --- left displays --- */
+
+#left-displays {
+  position: absolute;
+  left: 0px;
+  width: 400px;
+  bottom: 0px;
+  top: 40px;
+
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+#points-panel {
+  position: absolute;
+  left: 400px;
+  width: 160px;
+  bottom: 0px;
+  top: 40px;
+
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+#xy {
+  left: 0;
+  top: 0;
+  right: 50%;
+  bottom: 75%;
+  
+  border: solid 2px #3498db;
+  background: #3498db;
+}
+
+#xz {
+  left: 0;
+  top: 25%;
+  right: 50%;
+  bottom: 50%;
+
+  border: solid 2px #2ecc71;
+  background: #2ecc71;
+}
+#xw {
+  left: 50%;
+  top: 0;
+  right: 0;
+  bottom: 75%;
+  
+  border: solid 2px #f1c40f;
+  background: #f1c40f;
+}
+#zy {
+  left: 0;
+  top: 50%;
+  right: 50%;
+  bottom: 25%;
+
+  border: solid 2px #9b59b6;
+  background: #9b59b6;
+}
+#yw {
+  left: 50%;
+  top: 25%;
+  right: 0;
+  bottom: 50%;
+  
+  border: solid 2px #e67e22;
+  background: #e67e22;
+}
+#zw {
+  left: 50%;
+  top: 50%;
+  right: 0;
+  bottom: 25%;
+  
+  border: solid 2px #e74c3c;
+  background: #e74c3c;
+}
+#coordinates {
+  left: 0;
+  top: 75%;
+  right: 0;
+  bottom: 0;
+  
+  border: solid 2px #34495e;
+  background: #34495e;
+}
+#points-list {
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  
+  border: solid 2px #34495e;
+  background: #34495e;
+}
+#main-display{
+  position: absolute;
+  overflow: hidden;
+  border-radius: 2px;
+  
+  left: 560px;
+  top: 40px;
+  right: 0%;
+  bottom: 0%;
+
+  outline: none;
+  
+  margin-left: 8px;
+  margin-top: 8px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  border: solid 2px #34495e;
+  background: #34495e;
+}
+#main-display-canvas-container {
+  position: absolute;
+  top:20px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+#main-display canvas {
+  width: 100%;
+  height: 100%;
+  outline: none;
+}
+.panel-section {
+  position: absolute;
+  top:20px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+
+  background: rgba(0,0,0,0.5);
+  overflow: hidden;
+}
+.panel-section label {
+  margin-top: 2px;
+  margin-left: 4px;
+  width: 20px;
+  float: left;
+  color: white;
+}
+.panel-section input {
+  margin-right: 2px;
+  width: 70px;
+  float: left;
+  border-radius: 2px;
+  border: none;
+  padding: 3px;
+  background: rgba(255,255,255,0.4);
+}
+#point-name {
+  color: white;
+  margin-left: 3px;
+  margin-bottom: 3px;
+  margin-top: 5px;
+}
+.display-section {
+  position: absolute;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 8px;
+  margin-left: 8px;
+}
+.display-topbar {
+  position: absolute;
+  top:0;
+  height: 20px;
+  left: 0;
+  right: 0;
+  padding: 1px;
+  color: white;
+}
+.display {
+  position: absolute;
+  top:20px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+
+  overflow: scroll;
+}
+
+.flat-display-line {
+  position: absolute;
+  pointer-events:none;
+}
+.field {
+  width: 300px;
+  height: 300px;
+  background-image: url("../img/flat-display-background.png");
+  background-repeat: repeat;
+  background-position: 5px 5px; 
+}
+svg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  
+  height: 300px;
+  width: 300px;
+}
+.point {
+  z-index: 10;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 5px;
+  
+  position: absolute;
+  cursor: pointer;
+}
+
+.point-selected {
+  cursor: pointer;
+  z-index: 1000;
+  background:#e67e22;
+}
+
+#points-container {
+  margin:0;
+  padding:0;
+  overflow-y:auto;
+  height: 100%;
+}
+.point-on-list {
+  padding: 3px;
+  background: rgba(255,255,255,0.4);
+}
+.point-on-list:hover {
+  background: rgba(255,255,255,0.5);
+  cursor:pointer;
+}
+.point-on-list-selected {
+  background: #e67e22;
+  color: white;
+}
+.point-on-list-selected:hover {
+  background: #e76d11;
+  color: white;
+}
